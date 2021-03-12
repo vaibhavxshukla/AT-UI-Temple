@@ -1,0 +1,307 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Ramparivar": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/ramparivar",
+      "sourceRoot": "projects/ramparivar/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/Ramparivar",
+            "index": "projects/ramparivar/src/index.html",
+            "main": "projects/ramparivar/src/main.ts",
+            "polyfills": "projects/ramparivar/src/polyfills.ts",
+            "tsConfig": "projects/ramparivar/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ramparivar/src/favicon.ico",
+              "projects/ramparivar/src/assets"
+            ],
+            "styles": [
+              "projects/ramparivar/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ramparivar/src/environments/environment.ts",
+                  "with": "projects/ramparivar/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "Ramparivar:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Ramparivar:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "Ramparivar:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ramparivar/src/test.ts",
+            "polyfills": "projects/ramparivar/src/polyfills.ts",
+            "tsConfig": "projects/ramparivar/tsconfig.spec.json",
+            "karmaConfig": "projects/ramparivar/karma.conf.js",
+            "assets": [
+              "projects/ramparivar/src/favicon.ico",
+              "projects/ramparivar/src/assets"
+            ],
+            "styles": [
+              "projects/ramparivar/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ramparivar/tsconfig.app.json",
+              "projects/ramparivar/tsconfig.spec.json",
+              "projects/ramparivar/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ramparivar/e2e/protractor.conf.js",
+            "devServerTarget": "Ramparivar:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "Ramparivar:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "AT-Angular-Util": {
+      "projectType": "library",
+      "root": "projects/at-angular-util",
+      "sourceRoot": "projects/at-angular-util/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/at-angular-util/tsconfig.lib.json",
+            "project": "projects/at-angular-util/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/at-angular-util/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/at-angular-util/src/test.ts",
+            "tsConfig": "projects/at-angular-util/tsconfig.spec.json",
+            "karmaConfig": "projects/at-angular-util/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/at-angular-util/tsconfig.lib.json",
+              "projects/at-angular-util/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ShayamParivar": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/shayam-parivar",
+      "sourceRoot": "projects/shayam-parivar/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ShayamParivar",
+            "index": "projects/shayam-parivar/src/index.html",
+            "main": "projects/shayam-parivar/src/main.ts",
+            "polyfills": "projects/shayam-parivar/src/polyfills.ts",
+            "tsConfig": "projects/shayam-parivar/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/shayam-parivar/src/favicon.ico",
+              "projects/shayam-parivar/src/assets"
+            ],
+            "styles": [
+              "projects/shayam-parivar/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/shayam-parivar/src/environments/environment.ts",
+                  "with": "projects/shayam-parivar/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ShayamParivar:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ShayamParivar:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ShayamParivar:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/shayam-parivar/src/test.ts",
+            "polyfills": "projects/shayam-parivar/src/polyfills.ts",
+            "tsConfig": "projects/shayam-parivar/tsconfig.spec.json",
+            "karmaConfig": "projects/shayam-parivar/karma.conf.js",
+            "assets": [
+              "projects/shayam-parivar/src/favicon.ico",
+              "projects/shayam-parivar/src/assets"
+            ],
+            "styles": [
+              "projects/shayam-parivar/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/shayam-parivar/tsconfig.app.json",
+              "projects/shayam-parivar/tsconfig.spec.json",
+              "projects/shayam-parivar/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/shayam-parivar/e2e/protractor.conf.js",
+            "devServerTarget": "ShayamParivar:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ShayamParivar:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "173a14e0-e5a4-46b7-a0b0-f1dc1ba395c5"
+  },
+  "defaultProject": "Ramparivar"
+}
