@@ -47,9 +47,17 @@
               "projects/ramparivar/src/assets"
             ],
             "styles": [
-              "projects/ramparivar/src/styles.css"
+              "projects/ramparivar/src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+
+              
             ],
-            "scripts": []
+           
+            "scripts": [
+
+              "./node_modules/jquery/dist/jquery.js",  
+              "./node_modules/bootstrap/dist/js/bootstrap.js" 
+            ]
           },
           "configurations": {
             "production": {
