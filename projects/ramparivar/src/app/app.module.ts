@@ -9,6 +9,8 @@ import { LeftPanelComponent } from './Components/Layout/left-panel/left-panel.co
 import { MainComponent } from './Components/main/main.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ImageGalleryComponent } from './Components/image-gallery/image-gallery.component';
+import { PastEventsComponent } from './Components/home/past-events/past-events.component';
+import { UpcomingEventsComponent } from './Components/home/upcoming-events/upcoming-events.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ImageGalleryComponent } from './Components/image-gallery/image-gallery.
     LeftPanelComponent,
     MainComponent,
     HomeComponent,
-    ImageGalleryComponent
+    ImageGalleryComponent,
+    PastEventsComponent,
+    UpcomingEventsComponent
   ],
   imports: [
     BrowserModule,
