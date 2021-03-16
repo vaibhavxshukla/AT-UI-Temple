@@ -9,4 +9,17 @@
         <div class="p-3 border bg-light"><app-upcoming-events></app-upcoming-events></div>
       </div>
     </div>
+    <div>
+      <tbody>
+        <tr *ngFor="let modelData of homeModel|async">
+           <td>{{modelData.ID}}</td>
+           <td>{{modelData.Title}}</td>
+          
+        </tr>
+      </tbody>
+     
+    </div>
+    <div>
+      <app-signup></app-signup>
+    </div>
   </div>

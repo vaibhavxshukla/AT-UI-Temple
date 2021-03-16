@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PastEventsComponent implements OnInit {
 
+  data:string;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.data="india i great";
   }
 
 }
