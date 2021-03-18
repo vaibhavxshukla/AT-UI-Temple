@@ -13,7 +13,7 @@ export class PastEventsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.data="india i great";
+    this.data="india is great";
   }
 
 }

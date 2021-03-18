@@ -10,6 +10,7 @@ import { HomeModel } from '../model/home-model';
 export class HomeService {
 
   private _apiUrl="/assets/mock-data/home.json";
+  
   constructor( private http:HttpClient) { }
 
   getHomeData():Observable<HomeModel[]>{
