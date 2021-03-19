@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { LoginComponent } from './Components/Auth/login/login.component';
 import { SignupComponent } from './Components/Auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagenNotFoundComponent } from './Component/pagen-not-found/pagen-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -52,7 +54,9 @@ import { PagenNotFoundComponent } from './Component/pagen-not-found/pagen-not-fo
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    NgbModule 
+    NgbModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

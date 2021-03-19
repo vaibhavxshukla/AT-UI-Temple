@@ -1,16 +1,21 @@
 
-<router-outlet></router-outlet>
 
-
-<div class="container">
-    <div class="col-12">
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<div >
+  <div>
+    <picture>
+      <source media='(min-width:0px)' srcset="assets/images/logo.jpg">
+      <img mat-card-image src="assets/images/logo.jpg" alt="Ramparivar">
+  </picture>
+  </div>
+    <div>
   <app-header></app-header>
     </div>
-    <div class="col-12">
+    <div >
       
       <router-outlet></router-outlet>
     </div>
-    <div class="col-12">
+    <div >
       <app-footer></app-footer>
     </div>
   </div>
