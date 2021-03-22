@@ -7,6 +7,8 @@ import{ PastEventsComponent} from '../app/Components/home/past-events/past-event
 import{ UpcomingEventsComponent} from '../app/Components/home/upcoming-events/upcoming-events.component';
 import{PagenNotFoundComponent} from '../app/Component/pagen-not-found/pagen-not-found.component';
 import{ImageGalleryComponent} from '../app/Components/image-gallery/image-gallery.component';
+import { MemberDetailsComponent } from './Components/member-details/member-details.component';
+
 
 const routes: Routes = [
   {
@@ -20,7 +22,8 @@ const routes: Routes = [
   {path:'Aboutus',component:AboutUsComponent},
   {path:'ContactUS',component:ContactUsComponent},
   {path:'ImageGallery',component:ImageGalleryComponent},
-  
+  {path:'MemberDetails',component:MemberDetailsComponent},
+
   {path:'', redirectTo:'/home',pathMatch:'full'},
   {path:'**',component:PagenNotFoundComponent}
 ];

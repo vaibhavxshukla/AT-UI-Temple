@@ -25,6 +25,7 @@ import { SignupComponent } from './Components/Auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagenNotFoundComponent } from './Component/pagen-not-found/pagen-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MemberDetailsComponent } from './Components/member-details/member-details.component';
 
 
 
@@ -44,7 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactUsComponent,
     LocationComponent,
     SendmailComponent,  
-    LoginComponent, SignupComponent, PagenNotFoundComponent
+    LoginComponent, SignupComponent, PagenNotFoundComponent, MemberDetailsComponent
     
   ],
   imports: [
