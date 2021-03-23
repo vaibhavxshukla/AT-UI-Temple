@@ -8,6 +8,7 @@ import{ UpcomingEventsComponent} from '../app/Components/home/upcoming-events/up
 import{PagenNotFoundComponent} from '../app/Component/pagen-not-found/pagen-not-found.component';
 import{ImageGalleryComponent} from '../app/Components/image-gallery/image-gallery.component';
 import { MemberDetailsComponent } from './Components/member-details/member-details.component';
+import { LoginComponent } from './Components/Auth/login/login.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'ContactUS',component:ContactUsComponent},
   {path:'ImageGallery',component:ImageGalleryComponent},
   {path:'MemberDetails',component:MemberDetailsComponent},
+  {path:'Login',component:LoginComponent},
 
   {path:'', redirectTo:'/home',pathMatch:'full'},
   {path:'**',component:PagenNotFoundComponent}
